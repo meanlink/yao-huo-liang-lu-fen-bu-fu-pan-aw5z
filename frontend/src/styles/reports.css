@@ -1,0 +1,23 @@
+/* 班历分发：版本标签、工作日勾选、预览与场次追查 */
+.mode-tag,.version-tag{display:inline-block;font-size:9px;letter-spacing:.08em;padding:3px 8px;border:1px solid var(--line);color:var(--muted);margin-left:8px;vertical-align:middle}
+.version-tag{border-color:var(--accent);color:var(--accent);background:oklch(95% .03 145)}
+.schedule-head{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.card-actions{display:flex;flex-direction:column;gap:9px;align-items:flex-end;flex-shrink:0}
+.compact-title{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.weekday-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px}
+.weekday-grid .check{flex-direction:row;align-items:center;gap:8px;margin:0;font-size:11px;font-weight:400}
+.weekday-grid .check input{width:auto;padding:0}
+.preview-box{margin:16px 0 8px;max-height:300px;overflow:auto;border:1px solid var(--line)}
+.preview-table table{font-size:10px}
+.preview-table td,.preview-table th{padding:8px 10px 8px 0}
+.slot-status{font-size:9px;padding:3px 7px;border:1px solid var(--line);white-space:nowrap}
+.slot-status.status-pending{color:oklch(45% .12 75);border-color:oklch(70% .12 75);background:oklch(94% .05 85)}
+.slot-status.status-delivered{color:var(--accent);border-color:var(--accent);background:oklch(95% .03 145)}
+.slot-status.status-skipped{color:var(--muted);background:oklch(92% .01 80)}
+.trace-filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.trace-panel .table-wrap{max-height:520px;border:1px solid var(--line);padding:0 12px}
+.version-history{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.version-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 12px;border:1px solid var(--line);background:var(--surface);font-size:11px}
+.version-row small{color:var(--muted);width:100%}
+.adjust-panel{margin-top:0}
+@media(max-width:767px){.weekday-grid{grid-template-columns:repeat(3,1fr)}.card-actions{flex-direction:row;align-items:center}}
